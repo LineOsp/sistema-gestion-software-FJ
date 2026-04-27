@@ -28,4 +28,3 @@ class Cliente:
         #Método que permitira mostrar la información ingresada.
     def mostrar_informacion(self):
         return f"{ self.__identificacion} | {self.__nombre} | {self.__apellido}"
-        
