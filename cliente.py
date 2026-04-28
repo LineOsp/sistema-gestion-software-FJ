@@ -8,23 +8,19 @@ class Cliente:
     
     #Constructor de la clase
     #Se ejecutara automaticamente cuando se crea el objeto "Cliente"
-    def __init__(self, identificacion, nombre, apellido):
+    def __init__(self, identificacion, nombre_apellido):
 
         #Validación de campos vacíos
         if not identificacion:
             raise ValueError("❌ La identificación no puede estar vacía.")
         
-        if not nombre:
-            raise ValueError("❌ El nombre no puede estar vacío.")
-        
-        if not apellido:
-            raise ValueError("❌ El apellido no puede estar vacío.")
+        if not nombre_apellido:
+            raise ValueError("❌ El nombre y apellido no pueden estar vacíos.")
         
         #Encapsulación: Esto permitira proteger los datos ingresados usando doble guión(__)
         self.__identificacion = identificacion
-        self.__nombre = nombre
-        self.__apellido = apellido
+        self.__nombre_apellido = nombre_apellido   
 
         #Método que permitira mostrar la información ingresada.
     def mostrar_informacion(self):
-        return f"{ self.__identificacion} | {self.__nombre} | {self.__apellido}"
+        return f"{ self.__identificacion} | {self.__nombre_apellido}"
