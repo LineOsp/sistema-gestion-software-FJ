@@ -1,4 +1,4 @@
-#Impotación de las clases Cliente, ServicioSala, ServicioEquipo y ServicioAsesoria desde sus respectivos módulos.
+#Impotación de las clases Cliente y Servicio
 from cliente import Cliente 
 from servicio import Servicio
 
