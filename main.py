@@ -1,6 +1,7 @@
-#Importación de la clase Cliente desde el archivo cliente.py
+#Importación de las clases Cliente, ServicioSala, ServicioEquipo, ServicioAsesoria y Reserva desde sus respectivos módulos.
 from cliente import Cliente
 from servicio import ServicioSala, ServicioEquipo, ServicioAsesoria
+from reserva import Reserva
 
 #Bloque de código para manejar errores al crear un objeto de la clase Cliente
 try:
@@ -12,6 +13,9 @@ try:
     servicio_equipo = ServicioEquipo("Equipo 1003", 50, 3)
     servicio_asesoria = ServicioAsesoria("Asesoría 1", 200, "estratégica")
 
+    #Reserva de un servicio para el cliente
+    reserva1 = Reserva(cliente1, servicio_sala)
+
 
     #Mostrar la información del cliente utilizando el método mostrar_informacion
     print(cliente1.mostrar_informacion())
@@ -20,6 +24,9 @@ try:
     print(servicio_sala.detalles())
     print(servicio_equipo.detalles())
     print(servicio_asesoria.detalles())
+
+    #Mostrar los detalles de la reserva, incluyendo la información del cliente y los detalles del servicio.
+    print(reserva1.mostrar_detalles_reserva())
 
 #Si se intenta crear un cliente con campos vacíos, se lanzará una excepción y se mostrará 
 #el mensaje de error correspondiente.
