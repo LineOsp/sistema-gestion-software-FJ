@@ -26,12 +26,12 @@ try:
     reserva3 = Reserva(cliente3, servicio_asesoria)
 
     #Mostrar la información de los clientes.
-    print("--------------------------------------------------------------------------------")
-    print("\n     INFORMACIÓN DE LOS CLIENTES     ")
-    print("--------------------------------------------------------------------------------")    
+    print("------------------------------------------------------------")
+    print("\n              INFORMACIÓN DE LOS CLIENTES                 ")
+    print("------------------------------------------------------------")    
 
-    print("\n Clientes registrados en el sistema ")
-    print("--------------------------------------------------------------------------------")    
+    print("\n Clientes registrados en el sistema: ")
+    print("------------------------------------------------------------")  
     print(f"\n Cliente 1:")
     print(cliente1.mostrar_informacion())
 
@@ -40,11 +40,10 @@ try:
 
     print(f"\n Cliente 3:")
     print(cliente3.mostrar_informacion())   
+    print("------------------------------------------------------------")   
 
-    print("--------------------------------------------------------------------------------")
-
-    print("\n     Detalles de los servicios     ")
-    print("--------------------------------------------------------------------------------")    
+    print("\n                DETALLES DE LOS SERVICIOS                 ")
+    print("------------------------------------------------------------")  
     print(f"\n Servicio 1:")
     print(servicio_sala.detalles())
 
@@ -54,9 +53,9 @@ try:
     print(f"\n Servicio 3:")
     print(servicio_asesoria.detalles())
 
-    print("--------------------------------------------------------------------------------")
-    print("\n     Detalles de las reservas     ")
-    print("--------------------------------------------------------------------------------")
+    print("------------------------------------------------------------")    
+    print("\n                DETALLES DE LAS RESERVAS                  ")
+    print("------------------------------------------------------------")    
     print(f"\n Reserva 1:")
     print(reserva1.mostrar_detalles_reserva())
 
@@ -65,7 +64,7 @@ try:
 
     print(f"\n Reserva 3:")
     print(reserva3.mostrar_detalles_reserva())   
-    print("--------------------------------------------------------------------------------")    
+    print("------------------------------------------------------------")    
 
 
 #Manejo de excepciones para capturar errores específicos relacionados con clientes, servicios y reservas, y mostrar 

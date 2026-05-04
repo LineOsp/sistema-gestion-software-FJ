@@ -93,4 +93,4 @@ class ServicioAsesoria(Servicio):
 
     #Describe los detalles del servicio de asesoría, incluyendo el nombre del cliente, el tipo de asesoría y el costo total.     
     def detalles(self):
-            return f"Asesoria {self._tipo_asesoria} para {self._nombre_apellido}, con un costo de {self.calcular_costo()}"
+            return f"Asesoria {self._tipo_asesoria} para {self._nombre_apellido}, con un costo de {self.calcular_costo()}."
