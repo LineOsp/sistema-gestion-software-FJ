@@ -3,6 +3,7 @@ Clase abstracta Servicio que define la estructura básica para los servicios ofr
 por el sistema de gestión de software.
 """
 from abc import ABC, abstractmethod
+from excepciones import ErrorServicio
 
 class Servicio(ABC):
 
@@ -10,10 +11,10 @@ class Servicio(ABC):
     # y que el precio sea un valor positivo.
     def __init__(self, nombre_apellido, precio):
         if not nombre_apellido:
-            raise ValueError("❌ El nombre y apellido del servicio no pueden estar vacíos.")
+            raise ErrorServicio("❌ El nombre y apellido del servicio no pueden estar vacíos.")
         
         if precio <= 0:
-            raise ValueError("❌ El precio del servicio debe ser un valor positivo.")
+            raise ErrorServicio("❌ El precio del servicio debe ser un valor positivo.")
         
         #Atributos protegidos para almacenar el nombre, apellido y su precio.
         self._nombre_apellido = nombre_apellido
@@ -35,7 +36,7 @@ class ServicioSala(Servicio):
           super().__init__(nombre_apellido, precio)
           
           if horas_alquiler <= 0:
-               raise ValueError("❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.")
+               raise ErrorServicio("❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.")
           
           self._horas_alquiler = horas_alquiler
     
@@ -45,7 +46,7 @@ class ServicioSala(Servicio):
     
     #Describe los detalles del servicio, incluyendo el nombre del cliente, el costo total y las horas de alquiler.
     def detalles(self):
-            return f"Servicio de sala para {self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._horas_alquiler} horas de alquiler."
+            return f"{self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._horas_alquiler} horas de alquiler."
      
 
 #Clase ServicioEquipo que hereda de la clase Servicio y representa un servicio de alquiler de equipo.
@@ -55,7 +56,7 @@ class ServicioEquipo(Servicio):
         super().__init__(nombre_apellido, precio)
         
         if dias_alquiler <= 0:
-            raise ValueError("❌ Los días de alquiler deben ser un valor positivo, mayor a cero.")
+            raise ErrorServicio("❌ Los días de alquiler deben ser un valor positivo, mayor a cero.")
 
         self._dias_alquiler = dias_alquiler
 
@@ -65,7 +66,7 @@ class ServicioEquipo(Servicio):
     
     #Describe los detalles del servicio, incluyendo el nombre del cliente, el costo total y los días de alquiler.
     def detalles(self):
-         return f"Servicio de equipo para {self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._dias_alquiler} días de alquiler."
+         return f"{self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._dias_alquiler} días de alquiler."
 
 
 #Clase ServicioAsesoria que hereda de la clase Servicio y representa un servicio de asesoría.
@@ -75,21 +76,21 @@ class ServicioAsesoria(Servicio):
         super().__init__(nombre_apellido, precio)
         
         if not tipo_asesoria:
-            raise ValueError("❌ Especifique el tipo de asesoría.")
+            raise ErrorServicio("❌ Especifique el tipo de asesoría.")
               
         self._tipo_asesoria = tipo_asesoria
  
     #Calcula el costo del servicio de asesoría basado en el tipo de asesoría.
     def calcular_costo(self):
-        if self._tipo_asesoria == "tecnica":
+        if self._tipo_asesoria == "Tecnica":
             return self._precio
-        elif self._tipo_asesoria == "estratégica":
-            return self._precio * 1.5
-        elif self._tipo_asesoria == "personalizada":
+        elif self._tipo_asesoria == "Estratégica":
             return self._precio * 2
+        elif self._tipo_asesoria == "Personalizada":
+            return self._precio * 3
         else:
-            raise ValueError("❌ Tipo de asesoría no reconocido. Use 'tecnica', 'estratégica' o 'personalizada'.")
+            raise ErrorServicio("❌ Tipo de asesoría no reconocido. Use 'tecnica', 'estratégica' o 'personalizada'.")
 
     #Describe los detalles del servicio de asesoría, incluyendo el nombre del cliente, el tipo de asesoría y el costo total.     
     def detalles(self):
-            return f"Servicio de asesoría {self._tipo_asesoria} para {self._nombre_apellido}, con un costo de {self.calcular_costo()}."
+            return f"Asesoria {self._tipo_asesoria} para {self._nombre_apellido}, con un costo de {self.calcular_costo()}"

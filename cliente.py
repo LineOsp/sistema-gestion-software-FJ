@@ -1,9 +1,10 @@
+from excepciones import ErrorCliente
+
 """
 Definición de la clase cliente
 Representa un cliente que ingresa en el sistema.
 
 """
-
 class Cliente:
     
     #Constructor de la clase
@@ -12,10 +13,10 @@ class Cliente:
 
         #Validación de campos vacíos
         if not identificacion:
-            raise ValueError("❌ La identificación no puede estar vacía.")
+            raise ErrorCliente("❌ La identificación no puede estar vacía.")
         
         if not nombre_apellido:
-            raise ValueError("❌ El nombre y apellido no pueden estar vacíos.")
+            raise ErrorCliente("❌ El nombre y apellido no pueden estar vacíos.")
         
         #Encapsulación: Esto permitira proteger los datos ingresados usando doble guión(__)
         self.__identificacion = identificacion
