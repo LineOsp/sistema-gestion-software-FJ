@@ -1,5 +1,7 @@
-#Impotación de las clases Cliente y Servicio
+#Importación de la clase "ErrorReserva" desde el archivo "excepciones.py" para manejar errores específicos relacionados con reservas.
 from excepciones import ErrorReserva
+
+#Impotación de las clases Cliente y Servicio para establecer la relación entre un cliente y el servicio que desea reservar.
 from cliente import Cliente 
 from servicio import Servicio
 
