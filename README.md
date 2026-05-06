@@ -1,7 +1,7 @@
 #Sistema de Gestión de Servicios y Reservas.
 
 ##📌Descripción del proyecto:
-- Este proyecto feu desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automaticamente errores que se generen enviandolos automaticamente a un archivo de logs. 
+- Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automaticamente errores que se generen enviandolos automaticamente a un archivo de logs. 
 
 ##📌Tecnologías que han sido utilizadas:
 - Python
@@ -23,7 +23,7 @@ sistema-gestion-software-FJ/
 
 ##📌Descripción de los archivos del proyecto:
 
--cliente.py
+- cliente.py
 
 Contiene la clase Cliente, la cual esta encargada de almacenar la infornación de todos los clientes que ingresen al sistema. 
 
