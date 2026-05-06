@@ -1,9 +1,11 @@
+#Importación de la clase "ErrorServicio" desde el archivo "excepciones.py" para manejar errores específicos relacionados con servicios.
+from excepciones import ErrorServicio
+
 """
 Clase abstracta Servicio que define la estructura básica para los servicios ofrecidos 
 por el sistema de gestión de software.
 """
 from abc import ABC, abstractmethod
-from excepciones import ErrorServicio
 
 class Servicio(ABC):
 
@@ -82,7 +84,7 @@ class ServicioAsesoria(Servicio):
  
     #Calcula el costo del servicio de asesoría basado en el tipo de asesoría.
     def calcular_costo(self):
-        if self._tipo_asesoria == "Tecnica":
+        if self._tipo_asesoria == "Técnica":
             return self._precio
         elif self._tipo_asesoria == "Estratégica":
             return self._precio * 2

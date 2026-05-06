@@ -1,1 +1,2 @@
 [2026-05-05 12:17:43.327475] ERROR: Sistema iniciado correctamente. No se han detectado errores.[2026-05-05 17:01:50.101403] ❌ La identificación no puede estar vacía.
+[2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
