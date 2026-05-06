@@ -1,3 +1,4 @@
+#Importación de la clase "ErrorCliente" desde el archivo "excepciones.py" para manejar errores específicos relacionados con clientes.
 from excepciones import ErrorCliente
 
 """
