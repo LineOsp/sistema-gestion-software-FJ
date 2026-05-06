@@ -1,15 +1,15 @@
-#Sistema de Gestión de Servicios y Reservas.
+# Sistema de Gestión de Servicios y Reservas.
 
 ##📌Descripción del proyecto:
 - Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automaticamente errores que se generen enviandolos automaticamente a un archivo de logs. 
 
-##📌Tecnologías que han sido utilizadas:
+## 📌Tecnologías que han sido utilizadas:
 - Python
 -Git
 - GitHub
 - Visual Studio Code 
 
-#📌Estructura del proyecto:
+# 📌Estructura del proyecto:
 sistema-gestion-software-FJ/ 
 - cliente.py 
 - servicio.py 
@@ -21,7 +21,7 @@ sistema-gestion-software-FJ/
 - .gitignore 
 - LICENSE
 
-##📌Descripción de los archivos del proyecto:
+## 📌Descripción de los archivos del proyecto:
 
 - cliente.py
 
@@ -59,7 +59,7 @@ Achico principal del proyecto. Es el encargado de ejecutar e integrar todo el si
 
 Archivo donde se guardaran automáticamente los errores que se generen durante la ejecución del programa.
 
-##📌Funcionalidades que contiene el Sistema:
+## 📌Funcionalidades que contiene el Sistema:
 
 - Registrar clientes.
 - Gestionar servicios.
@@ -69,7 +69,7 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 - Guardar los errores en logs.
 - Integración del sistema completo.
 
-##📌Conceptos aplicados:
+## 📌Conceptos aplicados:
 
 - Programación Orientada a Objetos (POO)
 - Herencia
@@ -78,7 +78,7 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 - Manejo de excepciones
 - Modularidad
 
-##📌Como se debe ejecutar el proyecto:
+## 📌Como se debe ejecutar el proyecto:
 
 - Clonar el repositorio:
 
@@ -92,7 +92,7 @@ cd sistema-gestion-software-FJ
 
 python main.py
 
-##📌Ejemplo de ejecución del sistema:
+## 📌Ejemplo de ejecución del sistema:
 
 - Ejemplo de clientes registrados:
 
@@ -137,7 +137,7 @@ Error de cliente: ❌ La identificación no puede estar vacía.
 
 [2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
 
-##📌Validaciones del sistema:
+## 📌Validaciones del sistema:
 
 El sistema crea validaciones que permite detectar errores como son:
  - Campos vacíos
@@ -147,15 +147,15 @@ El sistema crea validaciones que permite detectar errores como son:
 
 Cada error que sea detectado sera almacenado directamente en el archivo logs.txt
 
-##📌Evidencia del desarrollo del sistema:
+## 📌Evidencia del desarrollo del sistema:
 
 El proyecto ha sido creado utilizando Git y GitHub, dejando evidencias constantes por medio de commits y actualizaciones para mejoras de repositorio.
 
-##📌Autores:
+## 📌Autores:
 
 Liney Paola Ospino Vergel
 
-##📌Estado actual del proyecto:
+## 📌Estado actual del proyecto:
 
 ¡Proyecto en fase final! 
 Se estan integrando pruebas y documentación. 
