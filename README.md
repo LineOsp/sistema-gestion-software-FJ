@@ -76,7 +76,7 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 - Abstracción
 - Polimorfismo
 - Manejo de excepciones
-- odularidad
+- Modularidad
 
 ##📌Como se debe ejecutar el proyecto:
 
@@ -85,9 +85,11 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 git clone https://github.com/LineOsp/sistema-gestion-software-FJ
 
 - Ingresar a la carpeta de proyecto:
+
 cd sistema-gestion-software-FJ
 
 - Ejecutar el sistema:
+
 python main.py
 
 ##📌Ejemplo de ejecución del sistema:
