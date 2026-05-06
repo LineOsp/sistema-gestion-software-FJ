@@ -1,6 +1,6 @@
 # Sistema de Gestión de Servicios y Reservas.
 
-##📌Descripción del proyecto:
+## 📌Descripción del proyecto:
 - Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automaticamente errores que se generen enviandolos automaticamente a un archivo de logs. 
 
 ## 📌Tecnologías que han sido utilizadas:
