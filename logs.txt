@@ -7,10 +7,3 @@
 [2026-05-07 14:30:03.771707] ❌ Debe ingresar un servicio válido.
 [2026-05-07 14:30:03.772567] ❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.
 [2026-05-07 14:30:03.773635] ❌ Las horas de alquiler deben ser un número válido.
-[2026-05-07 14:34:29.022089] ❌ La identificación no puede estar vacía.
-[2026-05-07 14:34:29.023261] ❌ El precio del servicio debe ser un valor positivo, mayor a cero.
-[2026-05-07 14:34:29.024242] ❌ El precio del servicio debe ser un número válido.
-[2026-05-07 14:34:29.025432] ❌ Debe ingresar un cliente válido.
-[2026-05-07 14:34:29.026771] ❌ Debe ingresar un servicio válido.
-[2026-05-07 14:34:29.027873] ❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.
-[2026-05-07 14:34:29.029074] ❌ Las horas de alquiler deben ser un número válido.
