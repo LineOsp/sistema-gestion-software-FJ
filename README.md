@@ -5,17 +5,17 @@
 
 ## 📌Tecnologías que han sido utilizadas:
 - Python
--Git
+- Git
 - GitHub
 - Visual Studio Code 
 
-# 📌Estructura del proyecto:
+## 📌Estructura del proyecto:
 sistema-gestion-software-FJ/ 
 - cliente.py 
 - servicio.py 
 - reserva.py 
 - excepciones.py 
-- main.py 
+- main.py                       
 - logs.txt 
 - README.md 
 - .gitignore 
@@ -53,7 +53,7 @@ Encargada de capturar los errores dentro del sistema.
 
 - main.py
 
-Achico principal del proyecto. Es el encargado de ejecutar e integrar todo el sistema.
+Achivo principal del proyecto. Es el encargado de ejecutar e integrar todo el sistema.
 
 - logs.txt
 

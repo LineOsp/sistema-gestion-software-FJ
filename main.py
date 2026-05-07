@@ -2,54 +2,59 @@
 from datetime import datetime
 import os
 
-#Importación de las clases Cliente, ServicioSala, ServicioEquipo, ServicioAsesoria y Reserva desde sus respectivos módulos.
+#Importación de clases del sistema. 
 from cliente import Cliente
 from servicio import ServicioSala, ServicioEquipo, ServicioAsesoria
 from reserva import Reserva
 
-#Importación de excepciones para manejar errores específicos relacionados con clientes, servicios y reservas.
+#Importación de excepciones perzonalizadas.
 from excepciones import ErrorCliente, ErrorServicio, ErrorReserva
 
-#Función que permitira guardar los errores en logs.txt
+#Función para guardar los errores en logs.txt
 def guardar_log_error(error):
     
-    #
     print(os.getcwd())
 
     #Obtener la fecha y hora actual para registrar cuándo ocurrió el error.
     fecha = datetime.now()
 
-    #Abrir el archivo logs.txt en modo de escritura (append) para agregar nuevos errores sin sobrescribir los existentes, y escribir el mensaje de error 
-    # junto con la fecha y hora en que ocurrió el error.
+    #Guarda el error en logs.txt
     with open("logs.txt", "a", encoding= "utf-8") as archivo_log: archivo_log.write(f"[{fecha}] {error}\n")
 
 
-#Bloque de código principal del programa, donde se crean clientes, servicios y reservas, y se muestran sus detalles. Además, se maneja cualquier excepción que pueda ocurrir durante la ejecución del programa para garantizar que los errores se registren adecuadamente en el archivo de logs.
+#----------------------------------------------
+#             INICIO DEL SISTEMA             
+#----------------------------------------------
 try:
 
-    #Creación de clientes validos con identificaciones y nombres completos, y validando que los campos no estén vacíos para evitar errores relacionados con datos incompletos.
+    #------------------------------------------
+    #          CREACIÓN DE CLIENTES   
+    #------------------------------------------
     cliente1 = Cliente ("123456", "Juan Daza")
     cliente2 = Cliente ("346735", "Maria Gomez")
     cliente3 = Cliente ("789012", "Carlos Perez")
     
-    #Creación de servicios, incluyendo validaciones para asegurarse de que los datos ingresados 
-    #sean correctos y que los valores numéricos sean positivos.
+    #------------------------------------------
+    #         CREACIÓN DE SERVICIOS
+    #------------------------------------------
     servicio_sala = ServicioSala("Sala 101", 100, 5)
     servicio_equipo = ServicioEquipo("Proyector 03", 50, 3)
     servicio_asesoria = ServicioAsesoria("Estudiante", 200, "Estratégica")
-
-    #Creación de reservas, asociando cada cliente con un servicio específico, y validando que se ingresen objetos válidos para cliente y servicio.
+    
+    #------------------------------------------
+    #          CREACIÓN DE RESERVAS
+    #------------------------------------------
     reserva1 = Reserva(cliente1, servicio_sala)
     reserva2 = Reserva(cliente2, servicio_equipo)
     reserva3 = Reserva(cliente3, servicio_asesoria)
 
-    #Mostrar la información de los clientes.
-    print("------------------------------------------------------------")
-    print("\n              INFORMACIÓN DE LOS CLIENTES                 ")
+    #------------------------------------------
+    #      INFORMACIÓN DE CLIENTES
+    #------------------------------------------
+    print("\n------------------------------------------------------------")
+    print("              INFORMACIÓN DE LOS CLIENTES                 ")
     print("------------------------------------------------------------")    
 
-    print("\n Clientes registrados en el sistema: ")
-    print("------------------------------------------------------------")  
     print(f"\n Cliente 1:")
     print(cliente1.mostrar_informacion())
 
@@ -58,9 +63,12 @@ try:
 
     print(f"\n Cliente 3:")
     print(cliente3.mostrar_informacion())   
-    print("------------------------------------------------------------")   
 
-    print("\n                DETALLES DE LOS SERVICIOS                 ")
+    #------------------------------------------
+    #       INFORMACIÓN DE SERVICIOS
+    #------------------------------------------
+    print("\n------------------------------------------------------------")   
+    print("                DETALLES DE LOS SERVICIOS                   ")
     print("------------------------------------------------------------")  
     print(f"\n Servicio 1:")
     print(servicio_sala.detalles())
@@ -71,8 +79,11 @@ try:
     print(f"\n Servicio 3:")
     print(servicio_asesoria.detalles())
 
-    print("------------------------------------------------------------")    
-    print("\n                DETALLES DE LAS RESERVAS                  ")
+    #------------------------------------------
+    #       INFORMACIÓN DE RESERVAS
+    #------------------------------------------
+    print("\n------------------------------------------------------------")    
+    print("                 DETALLES DE LAS RESERVAS                   ")
     print("------------------------------------------------------------")    
     print(f"\n Reserva 1:")
     print(reserva1.mostrar_detalles_reserva())
@@ -82,16 +93,9 @@ try:
 
     print(f"\n Reserva 3:")
     print(reserva3.mostrar_detalles_reserva())   
-    print("------------------------------------------------------------")    
 
-    print("\n        PRUEBA DE ERROR PARA CLIENTES INVALIDOS           ") 
-    print("------------------------------------------------------------")
-    #Prueba de error para clientes con campos vacíos, lo que debería generar una excepción y mostrar un mensaje de error claro.
-    cliente_invalido = Cliente("", "")
-
-
-#Manejo de excepciones para capturar errores específicos relacionados con clientes, servicios y reservas, y mostrar 
-# mensajes de error claros en caso de que ocurra una excepción.
+#Bloques de manejo de excepciones encargados de capturar errores específicos relacionados con clientes, servicios y reservas.
+#Además de mostrar mensajes claros en consola, los errores son almacenados automáticamente en logs.txt para mantener un registro del sistema.
 except ErrorCliente as e:
     print(f"Error de cliente:", e)
     guardar_log_error(e)
@@ -106,4 +110,65 @@ except ErrorReserva as e:
 
 except Exception as e:
     print(f"Error inesperado:", e)
+    guardar_log_error(e)
+
+#------------------------------------------
+#          PRUEBA DE ERRORES  
+#------------------------------------------
+print("\n------------------------------------------------------------")    
+print("                    PRUEBAS DE ERRORES                      ")
+print("------------------------------------------------------------") 
+
+#Prueba de cliente inválido
+try:
+    error_cliente = Cliente("", "")
+
+except ErrorCliente as e:
+    print("Error de cliente:", e)
+    guardar_log_error(e)
+
+#Prueba de servicio con precio negativo
+try:
+    error_servicio = ServicioSala("Sala 105", -100, 5)
+
+except ErrorServicio as e:
+    print("Error de servicio:", e)
+    guardar_log_error(e)
+
+#Prueba con precio no numérico
+try:
+    error_servicio = ServicioEquipo("Proyector 05", "cincuenta", 3)
+
+except ErrorServicio as e:
+    print("Error de servicio:", e)
+    guardar_log_error(e)
+
+#Prueba de reserva sin cliente
+try:
+    error_reserva = Reserva(None, servicio_sala)
+except ErrorReserva as e:
+    print("Error de reserva:", e)
+    guardar_log_error(e)
+
+#Prueba de reserva sin servicio
+try:
+    error_reserva = Reserva(cliente1, None)
+except ErrorReserva as e:
+    print("Error de reserva:", e)
+    guardar_log_error(e)
+
+#Prueba de horas de alquiler negativas
+try:
+    error_servicio = ServicioSala("Sala 104", 100, -6)
+
+except ErrorServicio as e:
+    print("Error de servicio:", e)
+    guardar_log_error(e)
+
+#Prueba de horas de alquiler no numéricas
+try:
+    error_servicio = ServicioSala("Sala 90", 100, "siete")
+
+except ErrorServicio as e:
+    print("Error de servicio:", e)
     guardar_log_error(e)

@@ -13,10 +13,10 @@ class Cliente:
     def __init__(self, identificacion, nombre_apellido):
 
         #Validación de campos vacíos
-        if not identificacion:
+        if not identificacion.strip():
             raise ErrorCliente("❌ La identificación no puede estar vacía.")
         
-        if not nombre_apellido:
+        if not nombre_apellido.strip():
             raise ErrorCliente("❌ El nombre y apellido no pueden estar vacíos.")
         
         #Encapsulación: Esto permitira proteger los datos ingresados usando doble guión(__)
