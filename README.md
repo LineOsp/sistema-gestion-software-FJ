@@ -80,60 +80,68 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 
 ## 📌Como se debe ejecutar el proyecto:
 
-- Clonar el repositorio:
+- 1️⃣Clonar el repositorio:
 
 git clone https://github.com/LineOsp/sistema-gestion-software-FJ
 
-- Ingresar a la carpeta de proyecto:
+- 2️⃣Ingresar a la carpeta de proyecto:
 
 cd sistema-gestion-software-FJ
 
-- Ejecutar el sistema:
+- 3️⃣Ejecutar el sistema:
 
 python main.py
 
 ## 📌Ejemplo de ejecución del sistema:
 
-- Ejemplo de clientes registrados:
+- ➡️Ejemplo de clientes registrados:
 
               INFORMACIÓN DE LOS CLIENTES                 
 
  Cliente 1:
+
 123456 | Juan Daza
 
  Cliente 2:
+
 346735 | Maria Gomez
 
 
-- Ejemplo de servicios registrados:
+- ➡️Ejemplo de servicios registrados:
  
                 DETALLES DE LOS SERVICIOS                 
  
  Servicio 1:
+
 Sala 101, con un costo de 500 por 5 horas de alquiler.
 
  Servicio 2:
+
 Proyector 03, con un costo de 150 por 3 días de alquiler.
  
 
-- Ejemplo de reservas registradas:
+- ➡️Ejemplo de reservas registradas:
  
                 DETALLES DE LAS RESERVAS                  
  
  Reserva 1:
+
 123456 | Juan Daza 
+
 Sala 101, con un costo de 500 por 5 horas de alquiler..
 
  Reserva 2:
+
 346735 | Maria Gomez 
+
 Proyector 03, con un costo de 150 por 3 días de alquiler..
  
 
-- Ejemplo de manejo de errores:
+- ➡️Ejemplo de manejo de errores:
 
 Error de cliente: ❌ La identificación no puede estar vacía.
 
-- Ejemplo de registro en logs.txt
+- ➡️Ejemplo de registro en logs.txt
 
 [2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
 
