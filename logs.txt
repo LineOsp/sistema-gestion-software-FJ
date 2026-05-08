@@ -1,9 +1,8 @@
 [2026-05-05 12:17:43.327475] ERROR: Sistema iniciado correctamente. No se han detectado errores.
-[2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
-[2026-05-07 14:30:03.765333] ❌ La identificación no puede estar vacía.
-[2026-05-07 14:30:03.766658] ❌ El precio del servicio debe ser un valor positivo, mayor a cero.
-[2026-05-07 14:30:03.768820] ❌ El precio del servicio debe ser un número válido.
-[2026-05-07 14:30:03.770063] ❌ Debe ingresar un cliente válido.
-[2026-05-07 14:30:03.771707] ❌ Debe ingresar un servicio válido.
-[2026-05-07 14:30:03.772567] ❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.
-[2026-05-07 14:30:03.773635] ❌ Las horas de alquiler deben ser un número válido.
+[2026-05-08 09:51:20.596455] ❌ La identificación no puede estar vacía.
+[2026-05-08 09:51:20.597432] ❌ El precio del servicio debe ser un valor positivo, mayor a cero.
+[2026-05-08 09:51:20.598284] ❌ El precio del servicio debe ser un valor numérico válido.
+[2026-05-08 09:51:20.599268] ❌ Debe ingresar un cliente válido.
+[2026-05-08 09:51:20.600397] ❌ Debe ingresar un servicio válido.
+[2026-05-08 09:51:20.601591] ❌ Las horas de alquiler deben ser un valor numérico válido.
+[2026-05-08 09:51:20.602589] ❌ Las horas de alquiler deben ser un valor numérico válido.

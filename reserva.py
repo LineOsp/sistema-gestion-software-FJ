@@ -23,4 +23,4 @@ class Reserva:
 
     #Creación de un método para mostrar los detalles de la reserva, incluyendo la información del cliente y los detalles del servicio.
     def mostrar_detalles_reserva(self):
-        return f"{self._cliente.mostrar_informacion()} \n{self._servicio.detalles()}."
+        return f"{self._cliente.mostrar_informacion()} \n{self._servicio.detalles()}"

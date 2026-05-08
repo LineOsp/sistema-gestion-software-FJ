@@ -1,19 +1,16 @@
 #Importación del módulo datetime para manejar fechas y horas, especialmente para registrar la fecha y hora de los errores en el archivo de logs.
 from datetime import datetime
-import os
 
 #Importación de clases del sistema. 
 from cliente import Cliente
 from servicio import ServicioSala, ServicioEquipo, ServicioAsesoria
 from reserva import Reserva
 
-#Importación de excepciones perzonalizadas.
+#Importación de excepciones personalizadas.
 from excepciones import ErrorCliente, ErrorServicio, ErrorReserva
 
 #Función para guardar los errores en logs.txt
 def guardar_log_error(error):
-    
-    print(os.getcwd())
 
     #Obtener la fecha y hora actual para registrar cuándo ocurrió el error.
     fecha = datetime.now()
@@ -31,8 +28,8 @@ try:
     #          CREACIÓN DE CLIENTES   
     #------------------------------------------
     cliente1 = Cliente ("123456", "Juan Daza")
-    cliente2 = Cliente ("346735", "Maria Gomez")
-    cliente3 = Cliente ("789012", "Carlos Perez")
+    cliente2 = Cliente ("346735", "María Gomez")
+    cliente3 = Cliente ("789012", "Carlos Pérez")
     
     #------------------------------------------
     #         CREACIÓN DE SERVICIOS
@@ -51,47 +48,47 @@ try:
     #------------------------------------------
     #      INFORMACIÓN DE CLIENTES
     #------------------------------------------
-    print("\n------------------------------------------------------------")
-    print("              INFORMACIÓN DE LOS CLIENTES                 ")
-    print("------------------------------------------------------------")    
+    print("\n-----------------------------------------------------------------------------------------")  
+    print("                               INFORMACIÓN DE LOS CLIENTES                               ")
+    print("-----------------------------------------------------------------------------------------") 
 
-    print(f"\n Cliente 1:")
+    print("\n Cliente 1:")
     print(cliente1.mostrar_informacion())
 
-    print(f"\n Cliente 2:")
+    print("\n Cliente 2:")
     print(cliente2.mostrar_informacion())   
 
-    print(f"\n Cliente 3:")
+    print("\n Cliente 3:")
     print(cliente3.mostrar_informacion())   
 
     #------------------------------------------
     #       INFORMACIÓN DE SERVICIOS
     #------------------------------------------
-    print("\n------------------------------------------------------------")   
-    print("                DETALLES DE LOS SERVICIOS                   ")
-    print("------------------------------------------------------------")  
-    print(f"\n Servicio 1:")
+    print("\n-----------------------------------------------------------------------------------------")  
+    print("                              DETALLES DE LOS SERVICIOS                                  ")
+    print("-----------------------------------------------------------------------------------------")
+    print("\n Servicio 1:")
     print(servicio_sala.detalles())
 
-    print(f"\n Servicio 2:")
+    print("\n Servicio 2:")
     print(servicio_equipo.detalles())
 
-    print(f"\n Servicio 3:")
+    print("\n Servicio 3:")
     print(servicio_asesoria.detalles())
 
     #------------------------------------------
     #       INFORMACIÓN DE RESERVAS
     #------------------------------------------
-    print("\n------------------------------------------------------------")    
-    print("                 DETALLES DE LAS RESERVAS                   ")
-    print("------------------------------------------------------------")    
-    print(f"\n Reserva 1:")
+    print("\n-----------------------------------------------------------------------------------------")  
+    print("                                DETALLES DE LAS RESERVAS                                 ")
+    print("-----------------------------------------------------------------------------------------") 
+    print("\n Reserva 1:")
     print(reserva1.mostrar_detalles_reserva())
 
-    print(f"\n Reserva 2:")
+    print("\n Reserva 2:")
     print(reserva2.mostrar_detalles_reserva())
 
-    print(f"\n Reserva 3:")
+    print("\n Reserva 3:")
     print(reserva3.mostrar_detalles_reserva())   
 
 #Bloques de manejo de excepciones encargados de capturar errores específicos relacionados con clientes, servicios y reservas.
@@ -115,9 +112,9 @@ except Exception as e:
 #------------------------------------------
 #          PRUEBA DE ERRORES  
 #------------------------------------------
-print("\n------------------------------------------------------------")    
-print("                    PRUEBAS DE ERRORES                      ")
-print("------------------------------------------------------------") 
+print("\n-----------------------------------------------------------------------------------------")    
+print("                                  PRUEBAS DE ERRORES                                     ")
+print("-----------------------------------------------------------------------------------------") 
 
 #Prueba de cliente inválido
 try:
@@ -172,3 +169,7 @@ try:
 except ErrorServicio as e:
     print("Error de servicio:", e)
     guardar_log_error(e)
+
+print("\n-----------------------------------------------------------------------------------------")  
+print("                            SISTEMA FINALIZADO CORRECTAMENTE                             ")
+print("-----------------------------------------------------------------------------------------") 

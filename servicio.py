@@ -17,7 +17,7 @@ class Servicio(ABC):
             raise ErrorServicio("❌ El nombre y apellido del servicio no pueden estar vacíos.")
         
         if not isinstance(precio, (int, float)):
-            raise ErrorServicio("❌ El precio del servicio debe ser un número válido.")
+            raise ErrorServicio("❌ El precio del servicio debe ser un valor numérico válido.")
         
         if precio <= 0:
             raise ErrorServicio("❌ El precio del servicio debe ser un valor positivo, mayor a cero.")
@@ -44,10 +44,10 @@ class ServicioSala(Servicio):
           super().__init__(nombre_apellido, precio)
           
           if not isinstance(horas_alquiler, (int, float)):
-               raise ErrorServicio("❌ Las horas de alquiler deben ser un número válido.")
+               raise ErrorServicio("❌ Las horas de alquiler deben ser un valor numérico válido.")
           
           if horas_alquiler <= 0:
-               raise ErrorServicio("❌ Las horas de alquiler deben ser un valor positivo, mayor a cero.")
+               raise ErrorServicio("❌ Las horas de alquiler deben ser un valor numérico válido.")
           
           
           self._horas_alquiler = horas_alquiler
@@ -58,7 +58,7 @@ class ServicioSala(Servicio):
     
     #Describe los detalles del servicio, incluyendo el nombre del cliente, el costo total y las horas de alquiler.
     def detalles(self):
-            return f"{self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._horas_alquiler} horas de alquiler."
+            return f"Alquiler de {self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._horas_alquiler} horas."
      
 
 #Clase ServicioEquipo que hereda de la clase Servicio y representa un servicio de alquiler de equipo.
@@ -68,10 +68,10 @@ class ServicioEquipo(Servicio):
         super().__init__(nombre_apellido, precio)
         
         if not isinstance(dias_alquiler, (int, float)):
-            raise ErrorServicio("❌ Los días de alquiler deben ser un número válido.")
+            raise ErrorServicio("❌ Los días de alquiler deben ser un número positivo.")
         
         if dias_alquiler <= 0:
-            raise ErrorServicio("❌ Los días de alquiler deben ser un valor positivo, mayor a cero.")
+            raise ErrorServicio("❌ Los días de alquiler deben ser un valor numérico válido.")
 
         self._dias_alquiler = dias_alquiler
 
@@ -81,7 +81,7 @@ class ServicioEquipo(Servicio):
     
     #Describe los detalles del servicio, incluyendo el nombre del cliente, el costo total y los días de alquiler.
     def detalles(self):
-         return f"{self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._dias_alquiler} días de alquiler."
+         return f"Alquiler de {self._nombre_apellido}, con un costo de {self.calcular_costo()} por {self._dias_alquiler} días."
 
 
 #Clase ServicioAsesoria que hereda de la clase Servicio y representa un servicio de asesoría.
@@ -107,7 +107,7 @@ class ServicioAsesoria(Servicio):
         elif self._tipo_asesoria == "Personalizada":
             return self._precio * 3
         else:
-            raise ErrorServicio("❌ Tipo de asesoría no reconocido. Use 'tecnica', 'estratégica' o 'personalizada'.")
+            raise ErrorServicio("❌ Tipo de asesoría no reconocido. Use 'Técnica', 'Estratégica' o 'Personalizada'.")
 
     #Describe los detalles del servicio de asesoría, incluyendo el nombre del cliente, el tipo de asesoría y el costo total.     
     def detalles(self):
