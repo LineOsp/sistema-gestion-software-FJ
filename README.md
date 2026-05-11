@@ -6,13 +6,13 @@ Este proyecto fue desarrollado en Python aplicando la Programación Orientada a 
 
 Se enfoca en la robustez operativa mediante el uso de:
 
--Abstracción: Definición de moldes base para servicios.
+- Abstracción: Definición de moldes base para servicios.
 
--Herencia y Polimorfismo: Especialización de categorías con comportamientos únicos.
+- Herencia y Polimorfismo: Especialización de categorías con comportamientos únicos.
 
--Encapsulamiento: Protección de datos sensibles de clientes y costos.
+- Encapsulación: Protección de datos sensibles de clientes y costos.
 
--Gestión de Excepciones: Un sistema de control de errores que garantiza que la aplicación no se detenga ante entradas inválidas, derivando los fallos a un archivo de logs para su posterior auditoría.
+- Gestión de Excepciones: Un sistema de control de errores que garantiza que la aplicación no se detenga ante entradas inválidas, derivando los fallos a un archivo de logs para su posterior auditoría.
 
 ## 📌Objetivo del proyecto:
 
@@ -48,10 +48,8 @@ Implementa la clase Cliente, actuando como el repositorio de atributos para los 
 Contiene la clase abstracta Servicio, y las clases derivadas (o clases hijas) llamadas:
 
  - ServicioSala: Especializado en gestión de espacios físicos.
- - ServicioEquipo: Orientado a inventario técnico y préstamos.
+ - ServicioEquipo: Orientado a prestamos de equipos electronicos.
  - ServicioAsesoria: Enfocado en horas de consultoría profesional.
-
-Aquí se aplica el polimorfismo, permitiendo que cada servicio calcule sus costos de forma distinta.
 
 En este archivo se implementa la herencia, abstracción y polimorfismo. 
 
@@ -63,11 +61,9 @@ Actúa como el motor de vinculación. Se encarga de instanciar objetos que conec
 
 Contiene excepciones personalizadas dependiendo del servicio:
 
- - ErrorCliente: Fallos en validación de identidad.
- - ErrorServicio: Errores en parámetros de servicios.
- - ErrorReserva: Conflictos en la creación de registros.
-
-Permite al programador identificar exactamente en qué capa del sistema ocurrió una anomalía.
+ - ErrorCliente
+ - ErrorServicio
+ - ErrorReserva
 
 Encargada de capturar los errores dentro del sistema.
 
@@ -81,7 +77,7 @@ Funciona como una base de datos de texto plano donde se anexan (append) las traz
 
 ## 📌Funcionalidades del proyecto:
 
-- Registrar clientes: Alta de clientes con validación de identidad.
+- Registrar clientes: Alta validación de clientes.
 - Gestionar servicios: Gestión de servicios con diferentes lógicas de cobro.
 - Crear reservas: Generación de comprobantes de servicio vinculados.
 - Validar datos: Verificación de tipos de datos y rangos numéricos.
