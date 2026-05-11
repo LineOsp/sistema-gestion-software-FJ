@@ -7,8 +7,11 @@ Este proyecto fue desarrollado en Python aplicando la Programación Orientada a 
 Se enfoca en la robustez operativa mediante el uso de:
 
 -Abstracción: Definición de moldes base para servicios.
+
 -Herencia y Polimorfismo: Especialización de categorías con comportamientos únicos.
+
 -Encapsulamiento: Protección de datos sensibles de clientes y costos.
+
 -Gestión de Excepciones: Un sistema de control de errores que garantiza que la aplicación no se detenga ante entradas inválidas, derivando los fallos a un archivo de logs para su posterior auditoría.
 
 ## 📌Objetivo del proyecto:
