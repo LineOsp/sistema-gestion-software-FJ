@@ -4,6 +4,13 @@
 
 Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automáticamente errores que se generen enviandolos automáticamente a un archivo de logs. 
 
+Se enfoca en la robustez operativa mediante el uso de:
+
+-Abstracción: Definición de moldes base para servicios.
+-Herencia y Polimorfismo: Especialización de categorías con comportamientos únicos.
+-Encapsulamiento: Protección de datos sensibles de clientes y costos.
+-Gestión de Excepciones: Un sistema de control de errores que garantiza que la aplicación no se detenga ante entradas inválidas, derivando los fallos a un archivo de logs para su posterior auditoría.
+
 ## 📌Objetivo del proyecto:
 
 Aplicar conceptos de programación orientada a objetos por medio de el lenguaje de programación Python capaz de gestionar clientes, servicios y reservas, incorporando validaciones, excepciones personalizadas 
@@ -31,58 +38,62 @@ sistema-gestion-software-FJ/
 
 - cliente.py
 
-Contiene la clase Cliente, la cual esta encargada de almacenar la información de todos los clientes que ingresen al sistema. 
+Implementa la clase Cliente, actuando como el repositorio de atributos para los usuarios (ID, Nombre). Permite la instanciación de perfiles únicos dentro de la memoria del sistema.
 
 - servicio.py
 
 Contiene la clase abstracta Servicio, y las clases derivadas (o clases hijas) llamadas:
 
- - ServicioSala
- - ServicioEquipo
- - ServicioAsesoria
+ - ServicioSala: Especializado en gestión de espacios físicos.
+ - ServicioEquipo: Orientado a inventario técnico y préstamos.
+ - ServicioAsesoria: Enfocado en horas de consultoría profesional.
+
+Aquí se aplica el polimorfismo, permitiendo que cada servicio calcule sus costos de forma distinta.
 
 En este archivo se implementa la herencia, abstracción y polimorfismo. 
 
 - reserva.py
 
-Se relacionan los clientes con los servicios para luego generar las reservas dentro del sistema. 
+Actúa como el motor de vinculación. Se encarga de instanciar objetos que conectan un objeto Cliente con un objeto Servicio, generando un registro de transacción válido.
 
 - excepciones.py
 
 Contiene excepciones personalizadas dependiendo del servicio:
 
- - ErrorCliente
- - ErrorServicio
- - ErrorReserva
+ - ErrorCliente: Fallos en validación de identidad.
+ - ErrorServicio: Errores en parámetros de servicios.
+ - ErrorReserva: Conflictos en la creación de registros.
+
+Permite al programador identificar exactamente en qué capa del sistema ocurrió una anomalía.
 
 Encargada de capturar los errores dentro del sistema.
 
 - main.py
 
-Archivo principal del proyecto. Es el encargado de ejecutar e integrar todo el sistema.
+Es el núcleo ejecutable. Implementa el menú interactivo, gestiona el flujo de datos entre clases y contiene el bloque try-except principal para la captura de errores globales.
 
 - logs.txt
 
-Archivo donde se guardarán automáticamente los errores que se generen durante la ejecución del programa.
+Funciona como una base de datos de texto plano donde se anexan (append) las trazas de error con fecha y hora, facilitando el mantenimiento preventivo.
 
 ## 📌Funcionalidades del proyecto:
 
-- Registrar clientes.
-- Gestionar servicios.
-- Crear reservas.
-- Validar datos.
-- Manejar excepciones completamente personalizadas.
-- Guardar los errores en logs.
-- Integración del sistema completo.
+- Registrar clientes: Alta de clientes con validación de identidad.
+- Gestionar servicios: Gestión de servicios con diferentes lógicas de cobro.
+- Crear reservas: Generación de comprobantes de servicio vinculados.
+- Validar datos: Verificación de tipos de datos y rangos numéricos.
+- Manejar excepciones completamente personalizadas: Tratamiento de errores personalizado por módulo.
+- Integración del sistema completo: Escritura automatizada de fallos en disco.
+- Guardar los errores en logs: Conexión fluida entre todos los componentes del software.
 
 ## 📌Conceptos aplicados:
 
-- Programación Orientada a Objetos (POO)
-- Herencia
-- Abstracción
-- Polimorfismo
-- Manejo de excepciones
-- Modularidad
+- Programación Orientada a Objetos (POO): Organización basada en objetos que interactúan entre sí.
+- Herencia: Reutilización de código de Servicio en clases hijas.
+- Abstracción: Uso de métodos abstractos para definir contratos de código.
+- Polimorfismo: Capacidad de ejecutar calcular_costo() de diferentes maneras según el objeto.
+- Manejo de excepciones: Uso de raise y catch para control de flujo.
+- Modularidad: Separación de archivos para facilitar el escalamiento.
 
 ## 📌Cómo se debe ejecutar el proyecto:
 
@@ -147,7 +158,7 @@ Proyector 03, con un costo de 150 por 3 días de alquiler..
 
 Error de cliente: ❌ La identificación no puede estar vacía.
 
-- ➡️Ejemplo de registro en logs.txt:
+- ➡️Ejemplo de registro en logs.txt
 
 [2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
 
@@ -161,13 +172,13 @@ Tales como:
  - Cantidades inválidas
  - Reservas incorrectas
 
-Cada error que sea detectado será almacenado directamente en el archivo logs.txt.
+Cada error que sea detectado será almacenado directamente en el archivo logs.txt
 
 ## 📌Evidencia del desarrollo del sistema:
 
 El proyecto ha sido creado utilizando Git y GitHub, dejando evidencias constantes por medio de commits y actualizaciones para mejoras de repositorio.
 
-## 📌Registro de errores en logs.txt:
+## 📌Registro de errores en logs.txt
 
 El proyecto cuenta con un archivo llamado logs.txt, encargado de almacenar automáticamente todos los errores que presente el sistema durante la ejecución del 
 proyecto. Cada registro incluye fecha, hora y descripción del error para facilitar el seguimineto y control de fallos en el sistema. 
@@ -178,6 +189,6 @@ Liney Paola Ospino Vergel
 
 Edwin Yair Barreto Bertel
 
-## 📌Conclusión:
+## 📌Conclusión
  
 El desarrollo de este proyecto permitió aplicar los principales conceptos de programación orientada a objetos en Python, fortaleciendo el manejo de clases, herencia, excepciones personalizadas y trabajo colaborativo mediante Git y GitHub. Además, se logró construir un sistema organizado y funcional capaz de gestionar servicios, clientes y reservas de manera eficiente.
