@@ -147,7 +147,7 @@ Proyector 03, con un costo de 150 por 3 días de alquiler..
 
 Error de cliente: ❌ La identificación no puede estar vacía.
 
-- ➡️Ejemplo de registro en logs.txt
+- ➡️Ejemplo de registro en logs.txt:
 
 [2026-05-06 12:25:54.272349] ❌ La identificación no puede estar vacía.
 
@@ -161,13 +161,13 @@ Tales como:
  - Cantidades inválidas
  - Reservas incorrectas
 
-Cada error que sea detectado será almacenado directamente en el archivo logs.txt
+Cada error que sea detectado será almacenado directamente en el archivo logs.txt.
 
 ## 📌Evidencia del desarrollo del sistema:
 
 El proyecto ha sido creado utilizando Git y GitHub, dejando evidencias constantes por medio de commits y actualizaciones para mejoras de repositorio.
 
-## 📌Registro de errores en logs.txt
+## 📌Registro de errores en logs.txt:
 
 El proyecto cuenta con un archivo llamado logs.txt, encargado de almacenar automáticamente todos los errores que presente el sistema durante la ejecución del 
 proyecto. Cada registro incluye fecha, hora y descripción del error para facilitar el seguimineto y control de fallos en el sistema. 
@@ -178,6 +178,6 @@ Liney Paola Ospino Vergel
 
 Edwin Yair Barreto Bertel
 
-## 📌Conclusión
+## 📌Conclusión:
  
 El desarrollo de este proyecto permitió aplicar los principales conceptos de programación orientada a objetos en Python, fortaleciendo el manejo de clases, herencia, excepciones personalizadas y trabajo colaborativo mediante Git y GitHub. Además, se logró construir un sistema organizado y funcional capaz de gestionar servicios, clientes y reservas de manera eficiente.
