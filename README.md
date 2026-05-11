@@ -1,7 +1,13 @@
 # Sistema de Gestión de Servicios y Reservas.
 
 ## 📌Descripción del proyecto:
-- Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automaticamente errores que se generen enviandolos automaticamente a un archivo de logs. 
+
+Este proyecto fue desarrollado en Python aplicando la Programación Orientada a Objetos (POO). El sistema permite gestionar clientes, servicios y reservas, utilizando conceptos como herencia, encapsulación, abstracción, polimorfismo y un buen manejo de excepciones. Por otra parte, el sistema permite registrar automáticamente errores que se generen enviandolos automáticamente a un archivo de logs. 
+
+## 📌Objetivo del proyecto:
+
+Aplicar conceptos de programación orientada a objetos por medio de el lenguaje de programación Python capaz de gestionar clientes, servicios y reservas, incorporando validaciones, excepciones personalizadas 
+y registro de errores para fortalecer organización y confiabilidad del sistema. 
 
 ## 📌Tecnologías que han sido utilizadas:
 - Python
@@ -25,7 +31,7 @@ sistema-gestion-software-FJ/
 
 - cliente.py
 
-Contiene la clase Cliente, la cual esta encargada de almacenar la infornación de todos los clientes que ingresen al sistema. 
+Contiene la clase Cliente, la cual esta encargada de almacenar la información de todos los clientes que ingresen al sistema. 
 
 - servicio.py
 
@@ -53,13 +59,13 @@ Encargada de capturar los errores dentro del sistema.
 
 - main.py
 
-Achivo principal del proyecto. Es el encargado de ejecutar e integrar todo el sistema.
+Archivo principal del proyecto. Es el encargado de ejecutar e integrar todo el sistema.
 
 - logs.txt
 
-Archivo donde se guardaran automáticamente los errores que se generen durante la ejecución del programa.
+Archivo donde se guardarán automáticamente los errores que se generen durante la ejecución del programa.
 
-## 📌Funcionalidades que contiene el Sistema:
+## 📌Funcionalidades del proyecto:
 
 - Registrar clientes.
 - Gestionar servicios.
@@ -78,7 +84,7 @@ Archivo donde se guardaran automáticamente los errores que se generen durante l
 - Manejo de excepciones
 - Modularidad
 
-## 📌Como se debe ejecutar el proyecto:
+## 📌Cómo se debe ejecutar el proyecto:
 
 - 1️⃣Clonar el repositorio:
 
@@ -147,23 +153,31 @@ Error de cliente: ❌ La identificación no puede estar vacía.
 
 ## 📌Validaciones del sistema:
 
-El sistema crea validaciones que permite detectar errores como son:
+El sistema implementa diferentes validaciones que permite detectar errores relacionados con clientes, servicios y reservas.
+
+Tales como:
  - Campos vacíos
  - Precios negativos
  - Cantidades inválidas
  - Reservas incorrectas
 
-Cada error que sea detectado sera almacenado directamente en el archivo logs.txt
+Cada error que sea detectado será almacenado directamente en el archivo logs.txt
 
 ## 📌Evidencia del desarrollo del sistema:
 
 El proyecto ha sido creado utilizando Git y GitHub, dejando evidencias constantes por medio de commits y actualizaciones para mejoras de repositorio.
 
+## 📌Registro de errores en logs.txt
+
+El proyecto cuenta con un archivo llamado logs.txt, encargado de almacenar automáticamente todos los errores que presente el sistema durante la ejecución del 
+proyecto. Cada registro incluye fecha, hora y descripción del error para facilitar el seguimineto y control de fallos en el sistema. 
+
 ## 📌Autores:
 
 Liney Paola Ospino Vergel
 
-## 📌Estado actual del proyecto:
+Edwin Yair Barreto Bertel
 
-¡Proyecto en fase final! 
-Se estan integrando pruebas y documentación. 
+## 📌Conclusión
+ 
+El desarrollo de este proyecto permitió aplicar los principales conceptos de programación orientada a objetos en Python, fortaleciendo el manejo de clases, herencia, excepciones personalizadas y trabajo colaborativo mediante Git y GitHub. Además, se logró construir un sistema organizado y funcional capaz de gestionar servicios, clientes y reservas de manera eficiente.
